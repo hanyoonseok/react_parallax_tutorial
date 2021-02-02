@@ -3,7 +3,8 @@ import './style.css'
 export default function Parallax(){
     const [position, setPosition] = useState(0);
     function onScroll(){
-        setPosition(window.scrollY)
+        //setPosition(window.scrollY)
+        setPosition(window.pageYOffset);
     }
     useEffect(()=>{
         window.addEventListener("scroll", onScroll);
